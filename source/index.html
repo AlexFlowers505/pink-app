@@ -1,12 +1,210 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Пинк</title>
-  </head>
-  <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
-
-  </body>
+<html class="page" lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>PINK official app</title>
+</head>
+<body class="page__body">
+  <header class="page-header">
+    <a class="page-header__logo">
+      <img src="https://via.placeholder.com/150x150" alt="приложение 'PINK'">
+    </a>
+    <nav class="main-nav">
+      <button class="main-nav__toggle main-nav-toggle--on" type="button">
+        <span class="visually-hidden">Скрыть меню</span>
+      </button>
+      <ul class="main-nav__list site-list">
+        <li class="site-list__item site-list__item--active">
+          <a>
+            главная
+          </a>
+        </li>
+        <li class="site-list__item">
+          <a href="photos.html">
+            фотографии
+          </a>
+        </li>
+        <li class="site-list__item">
+          <a href="form.html">
+            конкурс
+          </a>
+        </li>
+        <li class="site-list__item">
+          <a href="javascript:void(0);">
+            html academy
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="page-main">
+    <h1 class="visually-hidden">приложение PINK</h1>
+    <section class="install-app">
+      <h2 class="visually-hidden">установка приложения</h2>
+      <p class="install-app__tagline">Взгляните на жизнь иначе!</p>
+      <button class="install-app__btn"></button>
+      <ul class="app-stores-list">
+        <li class="app-stores-list__item">
+          <a href="javascript:void(0);">
+            <img src="https://via.placeholder.com/150x150" alt="Apple store">
+          </a>
+        </li>
+        <li class="app-stores-list__item">
+          <a href="javascript:void(0);">
+            <img src="https://via.placeholder.com/150x150" alt="Play market">
+          </a>
+        </li>
+        <li class="app-stores-list__item">
+          <a href="javascript:void(0);">
+            <img src="https://via.placeholder.com/150x150" alt="Microsoft store">
+          </a>
+        </li>
+      </ul>
+      <p class="app-stores-list__caption">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+    </section>
+    <section class="features">
+      <h2 class="visually-hidden">преимущества</h2>
+      <p class="features__tagline">Устали от серости мегаполиса? Нам есть, что вам предложить!</p>
+      <ul class="features-list">
+        <li class="features-list__item">
+          <h3 class="features-list__heading">Поднимает настроение</h3>
+          <p class="features-list__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+        </li>
+        <li class="features-list__item">
+          <h3 class="features-list__heading">Меняет мир вокруг</h3>
+          <p class="features-list__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+        </li>
+        <li class="features-list__item">
+          <h3 class="features-list__heading">Заводит новых друзей</h3>
+          <p class="features-list__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+        </li>
+      </ul>
+      <img class="features__phone-pic" src="https://via.placeholder.com/150x150" alt="приложение в действии">
+    </section>
+    <section class="reviews">
+      <h2 class="visually-hidden">отзывы о нас</h2>
+      <ul class="reviews-list">
+        <li class="reviews-list__item reviews-list__item--active">
+          <p class="reviews-list__author">Николай Петров</p>
+          <p class="text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+        </li>
+        <li class="reviews-list__item">
+          <p class="reviews-list__author"></p>
+          <p class="reviews-list__text"></p>
+        </li>
+        <li class="reviews-list__item">
+          <p class="reviews-list__author"></p>
+          <p class="reviews-list__text"></p>
+        </li>
+      </ul>
+      <ul class="review-slider">
+        <li><button class="review-slider__btn review-slider__btn--active" aria-label="первый слайд" type="button"></button></li>
+        <li><button class="review-slider__btn" aria-label="второй слайд" type="button"></button></li>
+        <li><button class="review-slider__btn" aria-label="третий слайд" type="button"></button></li>
+      </ul>
+    </section>
+    <section class="pricing">
+      <h2 class="visually-hidden">цены</h2>
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th class="pricing__heading-cell">
+              <ul class="pricing__tariff-info">
+                <li class="pricing__tariff-name">база</li>
+                <li class="pricing__tariff-price">1,99 USD</li>
+              </ul>
+            </th>
+            <th class="pricing__heading-cell">
+              <ul class="pricing__tariff-info">
+                <li class="pricing__tariff-name">стандарт</li>
+                <li class="pricing__tariff-price">3,99 USD</li>
+              </ul>
+            </th>
+            <th class="pricing__heading-cell">
+              <ul class="pricing__tariff-info">
+                <li class="pricing__tariff-name">анлим</li>
+                <li class="pricing__tariff-price">9,99 USD</li>
+              </ul>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="pricing__cell">Розовый фильтр</td>
+            <td class="pricing__cell pricing__cell--check"></td>
+            <td class="pricing__cell pricing__cell--check"></td>
+            <td class="pricing__cell pricing__cell--check"></td>
+          </tr>
+          <tr>
+            <td class="pricing__cell">Смайлики</td>
+            <td class="pricing__cell pricing__cell--crossed-out"></td>
+            <td class="pricing__cell pricing__cell--check"></td>
+            <td class="pricing__cell pricing__cell--check"></td>
+          </tr>
+          <tr>
+            <td class="pricing__cell">Комментарии</td>
+            <td class="pricing__cell pricing__cell--crossed-out"></td>
+            <td class="pricing__cell pricing__cell--crossed-out"></td>
+            <td class="pricing__cell pricing__cell--check"></td>
+          </tr>
+        </tbody>
+      </table>
+      <ul class="pricing-slider">
+        <li><button class="pricing-slider__btn" aria-label="первый слайд" type="button"></button></li>
+        <li><button class="pricing-slider__btn pricing-slider__btn--active" aria-label="второй слайд" type="button"></button></li>
+        <li><button class="pricing-slider__btn" aria-label="третий слайд" type="button"></button></li>
+      </ul>
+    </section>
+    <section class="contacts">
+      <h2 class="visually-hidden">контакты</h2>
+      <p class="contacts__tagline">Остались вопросы? Свяжитесь с нами!</p>
+      <ul class="contacts-list">
+        <li class="contacts-list__item">
+          <h3 class="contacts-list__contact-heading">Звоните:</h3>
+          <p class="contacts-list__the-contact">+7 (812) 555-66-66</p>
+        </li>
+        <li class="contacts-list__item">
+          <h3 class="contacts-list__contact-heading">Пишите:</h3>
+          <p class="contacts-list__the-contact">mail@htmlacademy.ru</p>
+        </li>
+        <li class="contacts-list__item">
+          <h3 class="contacts-list__contact-heading">Приезжайте в гости:</h3>
+          <address class="contacts-list__the-contact">ул. Большая Конюшенная, 19/8</address>
+        </li>
+      </ul>
+    </section>
+    <section class="map">
+      <h2 class="visually-hidden">карта</h2>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <a class="page-footer__logo">
+      <img src="https://via.placeholder.com/150x150" alt="приложение 'PINK'">
+    </a>
+    <ul class="socials">
+      <li class="socials__item">
+        <a class="socials__link socials__link--twitter" href="javascript:void(0);" title="Мы в Twitter">
+          <img src="https://via.placeholder.com/150x150" alt="Twitter">
+        </a>
+      </li>
+      <li class="socials__item">
+        <a class="socials__link socials__link--fb" href="javascript:void(0);" title="Мы на Facebook ">
+          <img src="https://via.placeholder.com/150x150" alt="Facebook">
+        </a>
+      </li>
+      <li class="socials__item">
+        <a class="socials__link socials__link--yt" href="javascript:void(0);" title="Мы на YouTube">
+          <img src="https://via.placeholder.com/150x150" alt="Youtube">
+        </a>
+      </li>
+    </ul>
+    <div class="dev-credits">
+      <span class="dev-credits__caption">Разработано</span>
+      <a class="dev-credits__link" href="https://up.htmlacademy.ru/adaptive/20" aria-label="логотип HTML academy" title="HTML Academy">
+        <img class="dev-credits__logo" src="https://via.placeholder.com/150x150" alt="HTML Academy">
+      </a>
+    </div>
+  </footer>
+</body>
 </html>
