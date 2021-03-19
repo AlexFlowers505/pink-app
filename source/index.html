@@ -3,35 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <title>PINK official app</title>
+  <link href='css/style.css' rel='stylesheet'>
 </head>
 <body class="page__body">
   <header class="page-header">
-    <a class="page-header__logo">
-      <img src="https://via.placeholder.com/150x150" alt="приложение 'PINK'">
-    </a>
     <nav class="main-nav">
-      <button class="main-nav__toggle main-nav-toggle--on" type="button">
-        <span class="visually-hidden">Скрыть меню</span>
-      </button>
-      <ul class="main-nav__list site-list">
+      <ul class="main-nav__list site-list site-list--opened site-list--no-JS">
+        <li class="site-list__item site-list__upper-tab">
+          <div class="site-list__upper-tab-inside-wrapper">
+            <a>
+              <picture>
+                <source media="(min-width: 960px)"
+                        srcset="img/logo-pink-white-desktop.svg">
+                <source media="(min-width: 660px)"
+                        srcset="img/logo-pink-white-tablet.svg">   <!--mind that these numbers are not vars, so if the key widths vars will change in scss, these number would not update-->
+                <img src="img/logo-pink-white-mobile.svg"
+                 alt="приложение 'PINK'">
+              </picture>
+            </a>
+            <button class="site-list__burger-btn burger-btn--closed" aria-label="показать / скрыть меню навигации" type="button"></button>
+          </div>
+        </li>
         <li class="site-list__item site-list__item--active">
           <a>
-            главная
+            Главная
           </a>
         </li>
         <li class="site-list__item">
           <a href="photos.html">
-            фотографии
+            Фотографии
           </a>
         </li>
         <li class="site-list__item">
           <a href="form.html">
-            конкурс
+            Конкурс
           </a>
         </li>
         <li class="site-list__item">
           <a href="javascript:void(0);">
-            html academy
+            HTML Academy
           </a>
         </li>
       </ul>
@@ -41,26 +51,41 @@
     <h1 class="visually-hidden">приложение PINK</h1>
     <section class="install-app">
       <h2 class="visually-hidden">установка приложения</h2>
-      <p class="install-app__tagline">Взгляните на жизнь иначе!</p>
-      <button class="install-app__btn"></button>
-      <ul class="app-stores-list">
-        <li class="app-stores-list__item">
-          <a href="javascript:void(0);">
-            <img src="https://via.placeholder.com/150x150" alt="Apple store">
-          </a>
-        </li>
-        <li class="app-stores-list__item">
-          <a href="javascript:void(0);">
-            <img src="https://via.placeholder.com/150x150" alt="Play market">
-          </a>
-        </li>
-        <li class="app-stores-list__item">
-          <a href="javascript:void(0);">
-            <img src="https://via.placeholder.com/150x150" alt="Microsoft store">
-          </a>
-        </li>
-      </ul>
-      <p class="app-stores-list__caption">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+        <div class="install-app__flex-wrapper">
+          <div class="install-app__promo">
+            <p class="install-app__tagline">Взгляните на жизнь<br>иначе!</p>
+            <picture>
+              <source media="(min-width: 960px)"
+                      srcset="img/iphone-hand-desktop@1x.png 1x,
+                              img/iphone-hand-desktop@2x.png 2x">
+              <source media="(min-width: 660px)"
+                      srcset="img/iphone-hand-tablet@1x.png 1x,
+                              img/iphone-hand-tablet@2x.png 2x">
+              <img class="install-app__hand-pic"
+                   src="img/iphone-hand-mobile@1x.png"
+                   srcset="img/iphone-hand-mobile@2x.png 2x"
+            </picture>
+          </div>
+          <a class="install-app__btn" href="https://www.apple.com/app-store/" aria-label="скачать приложение на iOS">Скачать приложение</a>
+          <ul class="app-stores-list">
+            <li class="app-stores-list__item">
+              <a href="https://www.apple.com/app-store/">
+                <img src="img/logo-apple.svg" width="47" height="56" alt="Apple store" title="скачать приложение в Apple store">
+              </a>
+            </li>
+            <li class="app-stores-list__item">
+              <a href="https://playmarket.store/">
+                <img src="img/logo-android.svg" width="47" height="47" alt="Play market" title="скачать приложение в Play market">
+              </a>
+            </li>
+            <li class="app-stores-list__item">
+              <a href="https://www.microsoft.com/ru-ru/store/apps/windows">
+                <img src="img/logo-microsoft.svg"  width="44" height="41" alt="Microsoft store" title="скачать приложение в Microsoft store">
+              </a>
+            </li>
+          </ul>
+          <p class="app-stores-list__caption">Доступно для iPhone, iPad, Android,<br>Windows Phone, OS X, Windows 8</p>
+        </div>
     </section>
     <section class="features">
       <h2 class="visually-hidden">преимущества</h2>
@@ -206,5 +231,6 @@
       </a>
     </div>
   </footer>
+  <script src='js/app.js'></script>
 </body>
 </html>
