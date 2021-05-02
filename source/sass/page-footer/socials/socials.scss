@@ -1,0 +1,113 @@
+.socials {
+  padding-top: 39px;
+  background-color: $basic-white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 30px;
+
+  @media (min-width: $min-tablet-width) {
+    flex-direction: row;
+    padding-top: 8px;
+    width: $min-tablet-width - 40px;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  @media (min-width: $min-desktop-width) {
+    padding-top: 43px;
+    padding-bottom: 20px;
+    // width: $min-desktop-width - 20px;
+  }
+}
+
+.socials__caption {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  color: $basic-blue;
+  line-height: 0;
+  padding-right: 17px;
+
+  @media (min-width: $min-tablet-width) {
+    position: relative;
+    top: -2px;
+    left: 1px;
+  }
+
+  @media (min-width: $min-desktop-width) {
+    font-size: 18px;
+    top: -4px;
+    left: 2px;
+  }
+}
+
+.socials__the-socials-icon {
+  fill: $basic-pink;
+  width: 17px;
+  height: 17px;
+}
+
+.socials__html-academy-icon {
+  margin-top: -4px;
+  width: 27px;
+  height: 34px;
+}
+
+.socials__dev-credits {
+  padding-top: 27px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.socials__the-socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 178px;
+  padding-top: 15px;
+
+  @media (min-width: $min-tablet-width) {
+    position: relative;
+    left: -8px;
+  }
+
+  @media (min-width: $min-desktop-width) {
+    top: 2px;
+    left: 6px;
+    width: 169px;
+  }
+}
+
+.socials__the-socials-item {
+  display: flex;
+  border: $basic-grey 3px solid;
+  border-radius: 50%;
+  padding: 9px;
+  width: 30px;
+  height: 30px;
+}
+
+.socials__link {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 3px;
+}
+
+.socials__link--yt {
+  left: 2px;
+}
+
+.socials__pink-logo {
+  @media (min-width: $min-tablet-width) {
+    position: relative;
+    top: 5px;
+    left: -1px;
+  }
+}

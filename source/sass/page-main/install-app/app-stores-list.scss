@@ -1,0 +1,58 @@
+.app-stores-list__caption {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  color: $basic-white;
+  text-align: center;
+  margin-top: 1px;
+  margin-bottom: 31px;
+  z-index: 1;
+
+  @media (min-width: $min-tablet-width) {
+    font-size: 18px;
+    margin-bottom: 52px;
+  }
+
+  @media (min-width: $min-desktop-width) {
+    margin-bottom: 64px;
+  }
+}
+
+.app-stores-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+
+  @media (min-width: $min-tablet-width) {
+    align-items: center;
+    margin-left: -3px;
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: $min-desktop-width) {
+    margin-bottom: 37px;
+  }
+}
+
+.app-stores-list__item:not(:first-child) {
+  padding-left: 33px;
+  padding-top: 9px;
+}
+
+// apple pic displacement due to the design
+.app-stores-list__item:first-child {
+  position: relative;
+  top: 4px;
+
+  @media (min-width: $min-tablet-width) {
+    position: inherit;
+  }
+
+  @media (min-width: $min-desktop-width) {
+    position: relative;
+    top: -4px;
+  }
+}

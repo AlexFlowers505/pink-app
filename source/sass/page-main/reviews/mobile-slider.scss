@@ -1,0 +1,11 @@
+.reviews__mobile-slider {
+  @include slider-01-positioning();
+
+  @media (min-width: $min-desktop-width) {
+    display: none;
+  }
+}
+
+.mobile-slider__btn {
+  @include slider-01-btn-design();
+}

@@ -1,0 +1,27 @@
+.reviews__desktop-slider {
+  display: none;
+
+  @media (min-width: $min-desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 940px;
+    top: 200px;
+    left:50%;
+    transform: translate(-50%);
+  }
+}
+
+.desktop-slider__btn {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.desktop-slider__arrow-pic {
+  height: 41px;
+  width: 22px;
+  fill: $arrows-grey;
+}

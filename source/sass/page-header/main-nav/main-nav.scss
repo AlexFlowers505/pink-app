@@ -1,0 +1,11 @@
+.main-nav {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+
+  @media (min-width: $min-desktop-width) {
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 0 transparent;
+  }
+}

@@ -1,0 +1,99 @@
+.contacts-list {
+  padding-top: 4px;
+
+  @media (min-width: $min-tablet-width) {
+    width: $min-tablet-width - 40px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  @media (min-width: $min-desktop-width) {
+    width: $min-desktop-width - 40px;
+    justify-content: center;
+  }
+}
+
+.contacts-list__phone-item-wrapper {
+  @media (min-width: $min-tablet-width) {
+    flex-grow: 1;
+    padding-right: 20px;
+    padding-left: 18px;
+  }
+
+  @media (min-width: $min-desktop-width) {
+    order: 1;
+    padding-left: 36px;
+    flex-grow: 0;
+    margin-right: auto;
+  }
+}
+
+.contacts-list__mail-item-wrapper {
+  @media (min-width: $min-tablet-width) {
+    flex-grow: 1;
+    padding-left: 20px;
+  }
+
+  @media (min-width: $min-desktop-width) {
+    order: 3;
+    padding-right: 21px;
+    flex-grow: 0;
+    margin-left: auto;
+  }
+}
+
+.contacts-list__address-item {
+  margin-top: 33px;
+
+  @media (min-width: $min-tablet-width) {
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  @media (min-width: $min-desktop-width) {
+    order: 2;
+    width: auto;
+    margin-top: 0;
+    padding-left: 19px;
+    padding-right: 0;
+    flex-grow: 0;
+  }
+}
+
+.contacts-list__contact-heading {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 0;
+  color: $basic-blue;
+  text-align: center;
+
+  @media (min-width: $min-tablet-width) {
+    padding-bottom: 5px;
+  }
+
+  @media (min-width: $min-desktop-width) {
+    padding-bottom: 21px;;
+  }
+}
+
+.contacts-list__the-contact {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 33px;
+  text-align: center;
+  color: $basic-pink;
+  margin-top: -6px;
+  margin-bottom: 30px;
+}
+
+.contacts-list__br {
+  display: block;
+}

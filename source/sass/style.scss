@@ -1,12 +1,24 @@
-@import "vars.scss";
-@import "mixins.scss";
-@import "page-header.scss";
-@import "site-list.scss";
-@import "main-nav.scss";
-@import "install-app";
-@import "page-main";
-@import "app-stores-list";
-@import "features";
+@import "extra/vars.scss";
+@import "extra/mixins.scss";
+@import "page-header/page-header.scss";
+@import "page-header/main-nav/site-list.scss";
+@import "page-header/main-nav/main-nav.scss";
+@import "page-main/page-main";
+@import "page-main/install-app/install-app";
+@import "page-main/install-app/app-stores-list";
+@import "page-main/install-app/socials";
+@import "page-main/features/features";
+@import "page-main/features/tagline";
+@import "page-main/research/research";
+@import "page-main/reviews/reviews";
+@import "page-main/reviews/mobile-slider";
+@import "page-main/reviews/desktop-slider";
+@import "page-main/pricing/pricing";
+@import "page-main/pricing/pricing-slider";
+@import "page-main/contacts/contacts";
+@import "page-main/contacts/contacts-list";
+@import "page-footer/page-footer";
+@import "page-footer/socials/socials";
 
 @font-face {
   font-family: "OpenSans";
@@ -35,6 +47,7 @@ body {
   margin-top: 0;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 0;
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 30px;

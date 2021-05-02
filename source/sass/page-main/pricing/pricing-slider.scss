@@ -1,0 +1,12 @@
+.pricing-slider {
+  @include slider-01-positioning();
+  padding-bottom: 42px;
+
+  @media(min-width: $min-tablet-width) {
+    display: none;
+  }
+}
+
+.pricing-slider__btn {
+  @include slider-01-btn-design();
+}
