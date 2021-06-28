@@ -52,6 +52,7 @@
       }
 
       @media (min-width: $min-desktop-width) {
+        display: none;
         width: 960px;
         background-size: auto 645px;
         left: 55px;
@@ -87,11 +88,11 @@
 
   overflow: hidden;
 
-  @media (max-width: $min-tablet-width) and (max-resolution: 1dppx) {
+  @media (max-width: $min-tablet-width - 1px) and (max-resolution: 1dppx) {
     background-image: url("../img/dest/bg-back-mobile@1x.jpg");
   }
 
-  @media (max-width: $min-tablet-width) and (min-resolution: 2dppx) {
+  @media (max-width: $min-tablet-width - 1px) and (min-resolution: 2dppx) {
     background-image: url("../img/dest/bg-back-mobile@2x.jpg");
   }
 
@@ -154,6 +155,17 @@
   margin: 29px auto 15px;
   padding: 24px 35px;
 
+  @include interactive-element-01;
+
+  &:hover,
+  &:focus {
+    background-color: $basic-white;
+  }
+  &:active {
+    opacity: 1;
+    color: rgba($basic-pink, .3);
+  }
+
   @media (min-width: $min-tablet-width) {
     padding: 24px 45px;
     margin-bottom: 33px;
@@ -197,4 +209,34 @@
   @media (min-width: $min-tablet-width) {
     display: none;
   }
+
+  @media (min-width: $min-desktop-width) {
+    display: none;
+  }
+
+}
+
+.install-app__hand-pic-wrapper-desktop {
+  display: none;
+  @media (min-width: $min-desktop-width) {
+    display: block;
+    position: absolute;
+    content: "";
+    height: 645px;
+    width: 600px;
+    overflow: hidden;
+    left: 0;
+    right: -340px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 208px;
+  }
+}
+
+.install-app__hand-pic-desktop {
+  position: absolute;
+  content: "";
+  right: 0;
+  left: -325px;
+  // margin-left: 100px;
 }

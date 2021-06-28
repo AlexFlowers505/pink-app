@@ -44,6 +44,15 @@
   border-radius: 50%;
   background-color: $basic-darker-grey;
   border: none;
+  transition: .3s;
+
+  &:hover,
+  &:focus {
+    background-color: rgba($basic-black, .5);
+  }
+  &:active {
+    background-color: $basic-grey;
+  }
 
   &--active {
     cursor: pointer;
@@ -53,13 +62,21 @@
     border-radius: 50%;
     background-color: $basic-white;
     box-shadow: 0 0 0 3px $basic-blue;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $basic-white;
+    }
   }
 }
 
 @mixin slider-01-positioning() {
+  position: relative;
   display: flex;
   margin-left: auto;
   margin-right: auto;
+  left: 0;
+  right: 0;
   justify-content: center;
   min-width: 60px;
   padding-bottom: 0;
@@ -68,4 +85,98 @@
   & li:not(:last-child) {
     margin-right: 19px;
   }
+}
+
+
+
+@mixin interactive-element-01() {
+  cursor: pointer;
+  color: $basic-white;
+  transition-duration: 0.15s;
+
+  &:hover,
+  &:focus {
+    color: $basic-pink;
+  }
+  &:active {
+    opacity: .3;
+  }
+}
+
+@mixin interactive-svg-01() {
+    cursor: pointer;
+  fill: $basic-white;
+  transition-duration: 0.15s;
+
+  &:hover,
+  &:focus {
+    fill: $basic-pink;
+  }
+  &:active {
+    opacity: .3;
+  }
+}
+
+@mixin interactive-logo-01() {
+  @include interactive-svg-01;
+  &:active {
+    fill: $basic-white;
+  }
+}
+
+@mixin interactive-logo-02() {
+  cursor: pointer;
+  transition: .3s;
+  &:hover,
+  &:focus {
+    fill: $basic-pink;
+  }
+  &:active {
+    fill: $basic-darker-blue;
+    opacity: .3;
+  }
+}
+
+@mixin interactive-logo-03 {
+  transition: .3s;
+  &:hover,
+  &:focus {
+    fill: $basic-darker-blue;
+  }
+  &:active {
+    opacity: .3;
+  }
+}
+
+@mixin interactive-contact-link-01() {
+  &[href] {
+    transition: .3s;
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+      color: $basic-blue;
+    }
+    &:active {
+      text-decoration: none;
+      color: $basic-darker-grey;
+    }
+  }
+}
+
+@mixin interactive-socials-01() {
+  &:hover,
+  &:focus {
+    border-color: $basic-blue;
+  }
+  &:active {
+    border-color: $basic-grey;
+
+    .socials__the-socials-icon {
+      fill: rgba($basic-pink, .3);
+    }
+  }
+}
+
+@mixin interactive-slider-02() {
+
 }

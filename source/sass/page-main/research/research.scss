@@ -94,6 +94,7 @@
     display: block;
   }
 }
+
 .research__link {
   cursor: pointer;
   font-family: "Open Sans", "Arial", sans-serif;
@@ -102,6 +103,8 @@
   color: $basic-pink;
   text-decoration-line: underline;
   text-decoration-style: solid;
+
+  @include interactive-contact-link-01;
 
   @media (min-width: $min-desktop-width) {
     font-size: 18px;

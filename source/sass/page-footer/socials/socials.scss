@@ -19,9 +19,9 @@
     padding-right: 20px;
   }
   @media (min-width: $min-desktop-width) {
-    padding-top: 43px;
-    padding-bottom: 20px;
-    // width: $min-desktop-width - 20px;
+    padding-top: 32px;
+    padding-bottom: 60px;
+    width: $min-desktop-width - 40px;
   }
 }
 
@@ -51,6 +51,8 @@
   fill: $basic-pink;
   width: 17px;
   height: 17px;
+
+  transition: .3s;
 }
 
 .socials__html-academy-icon {
@@ -59,7 +61,7 @@
   height: 34px;
 }
 
-.socials__dev-credits {
+.socials__html-academy-link {
   padding-top: 27px;
   display: flex;
   align-items: flex-start;
@@ -91,6 +93,9 @@
   padding: 9px;
   width: 30px;
   height: 30px;
+
+  transition: .3s;
+  @include interactive-socials-01;
 }
 
 .socials__link {
@@ -105,9 +110,32 @@
 }
 
 .socials__pink-logo {
+  display: none;
+  &--mobile {
+    display: block;
+  }
+
   @media (min-width: $min-tablet-width) {
     position: relative;
     top: 5px;
     left: -1px;
   }
+
+  @media (min-width: $min-desktop-width) {
+    &--mobile {
+      display: none;
+    }
+    &--desktop {
+      display: block;
+    }
+  }
+
+  fill: $basic-darker-blue;
+  @include interactive-logo-02;
+
+}
+
+.socials__html-academy-link {
+  fill: $basic-pink;
+  @include interactive-logo-03;
 }

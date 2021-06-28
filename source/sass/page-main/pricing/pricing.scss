@@ -29,6 +29,8 @@
     overflow: visible;
     padding-bottom: 68px;
     margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   @media(min-width: $min-desktop-width) {
@@ -41,6 +43,20 @@
 .pricing__table {
   border-collapse: collapse;
   border-spacing: 0;
+  position: relative;
+  left: 0;
+  transition: .45s;
+
+  &--01-tariff-focus {
+    left: 280px;
+  }
+  &--03-tariff-focus {
+    left: -280px;
+  }
+
+  @media (min-width: $min-tablet-width) {
+    position: static;
+  }
 }
 
 .pricing__table-head {

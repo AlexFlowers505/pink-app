@@ -105,7 +105,7 @@ function assembleUserBuild() {
 
 function startWatch () {
   watch('source/sass/**/*.scss', optimizeStyles);
-  watch(['source/**/*.js', '!source/**/*.min.js'], optimizeScripts);
+  watch(['source/js/**/*.js', '!source/js/**/*.min.js'], optimizeScripts);
   watch('source/*.html').on('change', server.reload);
 }
 

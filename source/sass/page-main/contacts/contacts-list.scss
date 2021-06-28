@@ -83,6 +83,7 @@
 }
 
 .contacts-list__the-contact {
+  display: block;
   font-family: "Open Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 300;
@@ -92,6 +93,8 @@
   color: $basic-pink;
   margin-top: -6px;
   margin-bottom: 30px;
+
+  @include interactive-contact-link-01;
 }
 
 .contacts-list__br {

@@ -23,5 +23,14 @@
 .desktop-slider__arrow-pic {
   height: 41px;
   width: 22px;
-  fill: $arrows-grey;
+  fill: rgba($basic-blue, .3);
+
+  transition: .2s;
+  &:hover,
+  &:focus {
+    fill: rgba($basic-blue, .6);
+  }
+  &:active {
+    fill: rgba($basic-blue, .1);
+  }
 }
