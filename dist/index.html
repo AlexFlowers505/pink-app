@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>PINK official app</title>
+  <link href='css/app.min.css' rel='stylesheet'>
+</head>
+<body class="page__body">
+  <svg style="display:none">
+    <symbol id="icon-editor-contrast" viewBox="-35.422 -7.96 31.92 31.92">
+      <path fill="#231F20" d="M-19.462-3.96c6.595,0,11.96,5.365,11.96,11.96s-5.365,11.96-11.96,11.96S-31.422,14.595-31.422,8 S-26.057-3.96-19.462-3.96 M-19.462-7.96c-8.814,0-15.96,7.145-15.96,15.96c0,8.813,7.146,15.96,15.96,15.96S-3.502,16.813-3.502,8 C-3.502-0.815-10.648-7.96-19.462-7.96L-19.462-7.96z"/>
+      <path d="M-19.462,16.331c4.706,0,8.52-3.813,8.52-8.52c0-4.705-3.813-8.519-8.52-8.519"/>
+    </symbol><symbol id="icon-editor-crop" viewBox="0 0 48 48">
+      <path fill="none" d="M0,0h48v48H0V0z"/>
+      <path d="M34,30h4V14c0-2.21-1.79-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.21,1.79,4,4,4h20v8h4v-8h8v-4H14z"/>
+    </symbol><symbol id="icon-editor-diagram-fill" viewBox="22.5 69.048 253 253">
+      <path fill="#231F20" d="M149,69.048c-69.864,0-126.5,56.636-126.5,126.5c0,69.864,56.636,126.5,126.5,126.5 s126.5-56.636,126.5-126.5C275.5,125.685,218.864,69.048,149,69.048z M149,306.264c-60.844,0-110.167-49.323-110.167-110.167 C38.833,135.253,88.156,85.93,149,85.93c60.843,0,110.167,49.323,110.167,110.167C259.167,256.941,209.843,306.264,149,306.264z"/>
+    </symbol><symbol id="icon-editor-fill" viewBox="0 0 48 48">
+      <path fill="none" d="M0,0h48v48H0V0z"/>
+      <path d="M33.12,17.88L15.24,0l-2.83,2.83l4.76,4.76L6.88,17.88c-1.17,1.17-1.17,3.07,0,4.24l11,11C18.46,33.71,19.23,34,20,34 s1.54-0.29,2.12-0.88l11-11C34.29,20.95,34.29,19.05,33.12,17.88z M10.41,20L20,10.42L29.59,20H10.41z M38,23c0,0-4,4.33-4,7 c0,2.21,1.79,4,4,4s4-1.79,4-4C42,27.33,38,23,38,23z"/>
+      <rect y="40" width="48" height="3"/>
+    </symbol><symbol id="icon-facebook" viewBox="0 0 8.673 18.944">
+      <path d="M6.275,3.357c0.799,0,1.599,0,2.398,0c0-1.119,0-2.238,0-3.357c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.115 H0v3.517h1.958c0,3.104,0,6.208,0,9.312c1.279,0,2.558,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.115H5.786 C5.765,5.07,5.75,3.709,6.275,3.357z"/>
+    </symbol><symbol id="icon-heart" viewBox="521.939 473.064 12.545 11.99">
+      <g>
+        <path d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z"/>
+      </g>
+    </symbol><symbol id="icon-mail" viewBox="0 0 17.988 13.966">
+      <g>
+        <g>
+          <g>
+            <path fill="#FFFFFF" d="M14.914,1.814C16.111,0.816,15.816,0,14.257,0H3.731c-1.56,0-1.854,0.816-0.657,1.814l3.742,3.118 c1.197,0.998,3.158,0.998,4.355,0L14.914,1.814z"/>
+          </g>
+          <g>
+            <path fill="#FFFFFF" d="M11.913,7.044C10.715,8.042,9.718,8.869,9.695,8.88c0,0,0,0-0.02,0.013 C9.601,8.949,9.523,8.995,9.44,9.029C9.407,9.044,9.374,9.063,9.34,9.077c-0.11,0.034-0.223,0.058-0.335,0.059 c-0.003,0-0.007,0.001-0.01,0.001c0,0,0,0-0.001,0s-0.001,0-0.001,0c-0.003,0-0.007-0.001-0.01-0.001 C8.87,9.134,8.759,9.111,8.648,9.077C8.614,9.063,8.58,9.044,8.548,9.029c-0.083-0.034-0.16-0.08-0.235-0.136C8.293,8.88,8.293,8.88,8.293,8.88c-0.022-0.012-1.02-0.838-2.218-1.836L2.178,3.796C0.979,2.798,0,3.257,0,4.816v6.315 c0,1.56,1.275,2.835,2.835,2.835h12.318c1.56,0,2.835-1.275,2.835-2.835V4.816c0-1.559-0.979-2.018-2.178-1.02L11.913,7.044z"/>
+          </g>
+        </g>
+      </g>
+    </symbol><symbol id="icon-map-marker" viewBox="0 0 35.983 35.983">
+      <circle fill="#FFFFFF" cx="17.991" cy="17.991" r="17.991"/>
+      <circle fill="#D22856" cx="17.991" cy="17.991" r="7.866"/>
+    </symbol><symbol id="icon-menu-burger">
+      <g id="miu">
+        <g id="editor_list_view_hambuger_menu_glyph">
+          <g>
+            <path id="path-1" d="M1.137,0C0.51,0,0,0.428,0,1.01v1.981c0,0.558,0.494,1.01,1.139,1.01h47.671 c0.628,0,1.138-0.428,1.138-1.01V1.01c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,10.003C0.51,10.003,0,10.431,0,11.013v1.98 c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01v-1.98c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,20.005C0.51,20.005,0,20.434,0,21.016v1.981c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01 v-1.981c0-0.558-0.494-1.011-1.138-1.011H1.137z"/>
+          </g>
+          <g>
+            <path id="path-1_1_" d="M1.137,0C0.51,0,0,0.428,0,1.01v1.981c0,0.558,0.494,1.01,1.139,1.01h47.671 c0.628,0,1.138-0.428,1.138-1.01V1.01c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,10.003C0.51,10.003,0,10.431,0,11.013v1.98 c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01v-1.98c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,20.005C0.51,20.005,0,20.434,0,21.016v1.981c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01 v-1.981c0-0.558-0.494-1.011-1.138-1.011H1.137z"/>
+          </g>
+        </g>
+      </g>
+    </symbol><symbol id="icon-menu-cross">
+      <path d="M15.087,11.933l8.56-8.559c0.293-0.293,0.293-0.768,0-1.061L21.554,0.22C21.414,0.079,21.223,0,21.023,0 c-0.199,0-0.391,0.079-0.529,0.22l-8.561,8.56l-8.56-8.56c-0.282-0.282-0.78-0.282-1.061,0L0.22,2.313 c-0.293,0.293-0.293,0.768,0,1.061l8.56,8.559l-8.56,8.559c-0.293,0.293-0.293,0.768,0,1.062l2.093,2.094 c0.141,0.142,0.331,0.22,0.53,0.22c0.199,0,0.39-0.078,0.53-0.22l8.561-8.56l8.56,8.56c0.141,0.142,0.332,0.22,0.53,0.22 c0.199,0,0.39-0.078,0.53-0.22l2.093-2.094c0.293-0.294,0.293-0.769,0-1.062L15.087,11.933z"/>
+    </symbol><symbol id="icon-no" viewBox="0 0 26.752 26.752">
+      <path d="M15.497,13.376L26.312,2.562c0.586-0.585,0.586-1.535,0-2.121s-1.535-0.586-2.121,0L13.376,11.255L2.562,0.439 c-0.586-0.586-1.535-0.586-2.121,0c-0.586,0.585-0.586,1.535,0,2.121l10.814,10.815L0.439,24.19c-0.586,0.586-0.586,1.535,0,2.121 c0.293,0.293,0.677,0.439,1.061,0.439s0.768-0.146,1.061-0.439l10.815-10.814L24.19,26.312c0.293,0.293,0.677,0.439,1.061,0.439 s0.768-0.146,1.061-0.439c0.586-0.586,0.586-1.535,0-2.121L15.497,13.376z"/>
+    </symbol><symbol id="icon-phone" viewBox="0 0 19.697 19.696">
+      <path fill="#FFFFFF" d="M9.848,0C6.34,0,2.823,0.628,1.546,1.878c-1.058,1.04-1.412,2.874-1.53,4.035c0,0-0.016,0.115-0.016,0.165 c0,0.454,0.369,0.82,0.819,0.82c0.054,0,2.028-0.161,3.218-0.259c0.029-0.004,0.058-0.008,0.086-0.017 C4.566,6.61,4.924,6.25,4.924,5.803l0.003-1.617c0-0.5,0.407-0.902,0.907-0.902h8.027c0.499,0,0.907,0.402,0.907,0.902l0.003,1.617 c0,0.447,0.356,0.808,0.802,0.82c0.027,0.009,0.056,0.013,0.085,0.017c1.19,0.098,3.164,0.259,3.217,0.259 c0.451,0,0.822-0.366,0.822-0.82c0-0.05-0.018-0.165-0.018-0.165c-0.118-1.161-0.472-2.995-1.53-4.035 C16.873,0.628,13.356,0,9.848,0z M9.848,10.67c-0.908,0-1.643,0.733-1.643,1.64c0,0.907,0.734,1.641,1.643,1.641 c0.906,0,1.641-0.733,1.641-1.641C11.488,11.404,10.754,10.67,9.848,10.67z M8.616,6.975V5.951c0-0.567-0.46-1.026-1.025-1.026 c-0.566,0-1.024,0.459-1.024,1.026v1.024l-5.537,5.913c-0.382,0.376-0.619,0.894-0.619,1.47v1.646c0,0.907,0.734,1.643,1.641,1.643 h0.411v1.023c0,0.568,0.46,1.026,1.026,1.026c0.565,0,1.024-0.458,1.024-1.026v-1.023h10.669v1.023c0,0.568,0.46,1.026,1.025,1.026 c0.567,0,1.026-0.458,1.026-1.026v-1.023h0.411c0.905,0,1.64-0.735,1.64-1.643v-1.646c0-0.576-0.236-1.094-0.618-1.47L13.13,6.975 V5.951c0-0.567-0.459-1.026-1.024-1.026c-0.567,0-1.027,0.459-1.027,1.026v1.024H8.616z M9.848,9.028 c1.814,0,3.282,1.468,3.282,3.282s-1.468,3.282-3.282,3.282c-1.813,0-3.281-1.468-3.281-3.282S8.034,9.028,9.848,9.028z"/>
+    </symbol><symbol id="icon-quotes" viewBox="0 0 78.672 63.789">
+      <g>
+        <path d="M34.967,7.063L30.713,0C28.272,1.495,0,12.207,0,39.617c0,7.231,0.336,24.172,18.9,24.172 c11.187,0,13.94-10.279,13.94-13.584c0-21.977-21.382-14.177-21.382-14.177C11.458,17.957,31.263,9.184,34.967,7.063z"/>
+      </g>
+      <g>
+        <path d="M78.672,7.063L74.418,0c-2.44,1.495-30.713,12.207-30.713,39.617c0,7.231,0.337,24.172,18.9,24.172 c11.187,0,13.939-10.279,13.939-13.584c0-21.977-21.381-14.177-21.381-14.177C55.165,17.957,74.969,9.184,78.672,7.063z"/>
+      </g>
+    </symbol><symbol id="icon-review-arrow-left" viewBox="0 0 21.706 41.719">
+      <path d="M2.045,20.859L21.458,1.446c0.331-0.331,0.331-0.867,0-1.198c-0.33-0.331-0.867-0.331-1.197,0L0.248,20.261 c-0.331,0.33-0.331,0.867,0,1.197l20.013,20.013c0.164,0.165,0.382,0.248,0.599,0.248s0.434-0.083,0.599-0.248 c0.331-0.331,0.331-0.867,0-1.198L2.045,20.859z"/>
+    </symbol><symbol id="icon-review-arrow-right" viewBox="0 0 21.706 41.719">
+      <path d="M19.661,20.859L0.248,1.446c-0.331-0.331-0.331-0.867,0-1.198c0.33-0.331,0.867-0.331,1.197,0l20.013,20.012 c0.33,0.33,0.33,0.867,0,1.197L1.445,41.471c-0.164,0.165-0.382,0.248-0.599,0.248s-0.434-0.083-0.599-0.248 c-0.331-0.331-0.331-0.867,0-1.198L19.661,20.859z"/>
+    </symbol><symbol id="icon-timer-full" viewBox="0 0 238 276">
+      <path d="M211.314 81.6277L215.587 77.3408C221.752 71.1663 222.878 62.1925 218.086 57.4017C213.294 52.6109 204.334 53.7227 198.176 59.8971L193.871 64.208C176.746 50.2779 156.074 41.4187 134.187 38.6304V30.9603H140.305C149.019 30.9603 156.151 23.994 156.151 15.4842C156.151 6.97427 149.019 0 140.305 0H97.7208C89.0075 0 81.8755 6.96627 81.8755 15.4842C81.8755 24.002 89.0075 30.9603 97.7208 30.9603H103.839V38.6304C77.6967 41.9933 53.4093 53.9522 34.7872 72.6308C16.1652 91.3093 4.26218 115.651 0.945904 141.835C-2.37038 168.02 3.08772 194.566 16.4638 217.309C29.8399 240.052 50.377 257.704 74.8528 267.496C99.3286 277.288 126.358 278.665 151.7 271.412C177.042 264.16 199.263 248.687 214.875 227.421C230.488 206.156 238.609 180.302 237.964 153.915C237.32 127.529 227.946 102.103 211.314 81.6277ZM119.013 244.947C101.61 244.947 84.5984 239.779 70.1286 230.097C55.6589 220.414 44.3813 206.652 37.7219 190.551C31.0625 174.45 29.3205 156.733 32.7162 139.64C36.1119 122.547 44.4927 106.847 56.7989 94.5241C69.105 82.2015 84.7837 73.81 101.852 70.411C118.921 67.012 136.613 68.7581 152.69 75.4285C168.768 82.0989 182.509 93.3939 192.176 107.885C201.844 122.377 207.003 139.413 207.001 156.841C206.999 180.209 197.728 202.619 181.227 219.142C164.726 235.665 142.348 244.947 119.013 244.947Z" fill="#DEDEDE"/>
+      <circle cx="119" cy="157" r="93" stroke="#D22856" stroke-width="16" fill="transparent"/>
+      <path d="M115.906 191H68V180.922L85.2031 163.531C90.2969 158.312 93.625 154.703 95.1875 152.703C96.75 150.672 97.875 148.797 98.5625 147.078C99.25 145.359 99.5938 143.578 99.5938 141.734C99.5938 138.984 98.8281 136.938 97.2969 135.594C95.7969 134.25 93.7812 133.578 91.25 133.578C88.5938 133.578 86.0156 134.188 83.5156 135.406C81.0156 136.625 78.4062 138.359 75.6875 140.609L67.8125 131.281C71.1875 128.406 73.9844 126.375 76.2031 125.188C78.4219 124 80.8438 123.094 83.4688 122.469C86.0938 121.812 89.0312 121.484 92.2812 121.484C96.5625 121.484 100.344 122.266 103.625 123.828C106.906 125.391 109.453 127.578 111.266 130.391C113.078 133.203 113.984 136.422 113.984 140.047C113.984 143.203 113.422 146.172 112.297 148.953C111.203 151.703 109.484 154.531 107.141 157.438C104.828 160.344 100.734 164.484 94.8594 169.859L86.0469 178.156V178.812H115.906V191ZM172.297 176.797H164.047V191H149.891V176.797H120.641V166.719L150.688 122.469H164.047V165.547H172.297V176.797ZM149.891 165.547V153.922C149.891 151.984 149.969 149.172 150.125 145.484C150.281 141.797 150.406 139.656 150.5 139.062H150.125C148.969 141.625 147.578 144.125 145.953 146.562L133.391 165.547H149.891Z" fill="#D22856"/>
+    </symbol><symbol id="icon-timer" viewBox="0 0 298 345.097">
+      <path d="M264.568,102.055l5.355-5.355c7.717-7.717,9.124-18.938,3.126-24.935c-5.997-5.997-17.217-4.59-24.934,3.127l-5.386,5.385 C221.768,63.292,196.11,51.875,168,48.297v-9.583h7.658c10.914,0,19.843-8.711,19.843-19.357S186.573,0,175.659,0h-53.317  c-10.913,0-19.842,8.711-19.842,19.357s8.929,19.357,19.842,19.357H130v9.583C56.681,57.629,0,120.244,0,196.097  c0,82.291,66.709,149,149,149c82.29,0,149-66.709,149-149C298,160.434,285.465,127.703,264.568,102.055z M149,306.264 c-60.844,0-110.167-49.323-110.167-110.167S88.156,85.93,149,85.93c60.843,0,110.167,49.323,110.167,110.167  S209.843,306.264,149,306.264z"/>
+    </symbol><symbol id="icon-twitter" viewBox="0 0 17.5 14.663">
+      <g id="W6EeEF_1_">
+        <g>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.485,3.074,0.263,3.685,1.151 c0.694-0.226,1.372-0.47,2.072-0.691c-0.004,0.841-0.538,1.478-0.883,1.727C16.861,2.506,17.5,1.86,17.5,1.86 c-0.175,0.976-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0 c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881 c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.32,1.1,0.523,1.381,0.461 c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.654,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.787,11.283,0.153z"/>
+        </g>
+      </g>
+    </symbol><symbol id="icon-yes" viewBox="-82.357 4.875 21.698 16.09">
+      <path d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.0 C-60.562,6.191-60.562,5.558-60.953,5.167z"/>
+    </symbol><symbol id="icon-youtube" viewBox="0 0 14.64 13.96">
+      <path d="M1.775,13.78C0.799,14.257,0,13.758,0,12.671V1.29c0-1.088,0.799-1.585,1.775-1.109l12.133,5.932 c0.975,0.478,0.975,1.258,0,1.736L1.775,13.78z"/>
+    </symbol>
+  </svg>
+  <header class="page-header">
+    <nav class="main-nav">
+      <ul class="main-nav__list site-list site-list--opened site-list--no-JS">
+        <li class="site-list__item site-list__upper-tab">
+          <div class="site-list__upper-tab-inside-wrapper">
+            <a aria-label="на главную">
+                <div class="site-list__logo-wrapper">
+                  <svg class="site-list__logo site-list__logo--mobile" version="1.0" xmlns="http://www.w3.org/2000/svg" width="74.426" height="22.859">
+                    <path d="M0 1.449C0 .741.58.161 1.256.161h7.18c5.087 0 8.436 2.704 8.436 7.147v.064c0 4.861-4.057 7.373-8.854 7.373H2.544v6.825c0 .708-.58 1.288-1.288 1.288C.58 22.859 0 22.279 0 21.571V1.449zm8.114 10.979c3.734 0 6.182-1.996 6.182-4.958v-.065c0-3.22-2.415-4.894-6.054-4.894H2.544v9.917h5.57zm13.615-11.14C21.729.58 22.308 0 22.983 0c.709 0 1.288.58 1.288 1.288v20.283c0 .708-.579 1.288-1.288 1.288-.676 0-1.255-.58-1.255-1.288V1.288zm9.141.032c0-.676.579-1.256 1.256-1.256h.354c.58 0 .934.29 1.288.74l13.684 17.45V1.256A1.256 1.256 0 0148.707 0c.676 0 1.223.58 1.223 1.256v20.348c0 .676-.482 1.191-1.158 1.191h-.129c-.548 0-.934-.322-1.32-.772L33.349 4.153v17.45c0 .676-.547 1.256-1.255 1.256-.677 0-1.224-.58-1.224-1.256V1.32zm25.43-.032C56.3.58 56.879 0 57.556 0c.708 0 1.287.58 1.287 1.288v12.331L71.689.451c.29-.258.58-.451.999-.451.676 0 1.224.612 1.224 1.256 0 .354-.161.644-.419.901l-7.984 7.92 8.564 10.561c.225.29.354.547.354.934 0 .676-.579 1.288-1.287 1.288-.483 0-.806-.258-1.03-.58l-8.403-10.463-4.862 4.861v4.894c0 .708-.579 1.288-1.287 1.288-.677 0-1.256-.58-1.256-1.288V1.288z"/>
+                  </svg>
+                  <svg class="site-list__logo site-list__logo--tablet" xmlns="http://www.w3.org/2000/svg" width="146.3" height="40.375">
+                    <path d="M71.874 18.661c0-.708.58-1.288 1.256-1.288h7.18c5.087 0 8.436 2.704 8.436 7.146v.064c0 4.861-4.057 7.373-8.854 7.373h-5.475v6.825c0 .708-.58 1.288-1.288 1.288-.676 0-1.256-.58-1.256-1.288v-20.12zm8.114 10.98c3.734 0 6.182-1.996 6.182-4.959v-.063c0-3.22-2.414-4.894-6.053-4.894h-5.699v9.917h5.57v-.001zM93.603 18.5c0-.708.579-1.288 1.255-1.288.709 0 1.288.58 1.288 1.288v20.283a1.29 1.29 0 01-1.288 1.287c-.676 0-1.255-.579-1.255-1.287V18.5zm9.141.032c0-.676.58-1.256 1.256-1.256h.354c.58 0 .935.29 1.288.74l13.684 17.45V18.468c0-.676.547-1.256 1.256-1.256.676 0 1.224.58 1.224 1.256v20.349c0 .676-.481 1.19-1.158 1.19h-.129c-.548 0-.935-.321-1.319-.772l-13.975-17.868v17.45c0 .676-.547 1.256-1.256 1.256-.676 0-1.223-.58-1.223-1.256V18.532h-.002zm25.429-.032c0-.708.58-1.288 1.257-1.288.708 0 1.286.58 1.286 1.288v12.331l12.848-13.168c.29-.257.579-.451.998-.451.676 0 1.225.612 1.225 1.256 0 .354-.162.644-.42.901l-7.984 7.92 8.564 10.561c.225.291.354.547.354.935 0 .676-.578 1.288-1.286 1.288-.483 0-.806-.258-1.03-.58l-8.402-10.463-4.863 4.861v4.894a1.29 1.29 0 01-1.286 1.288c-.677 0-1.257-.58-1.257-1.288V18.5h-.004zm-67.711 9.516L55.287 6.651C54.926 4.303 52.694 0 46.688 0a1.5 1.5 0 100 3c4.856 0 5.575 3.729 5.639 4.143l4.767 19.701h-2.073c-.742-5.927-5.802-10.531-11.927-10.531s-11.186 4.604-11.927 10.531h-1.82c-.741-5.927-5.802-10.531-11.927-10.531S6.235 20.917 5.493 26.844H3.42L8.187 7.143C8.25 6.729 8.97 3 13.826 3a1.5 1.5 0 100-3C7.82 0 5.588 4.303 5.227 6.651L.052 28.016c-.266 1.109.531 1.826 1.426 1.826.012 0 .023.004.036.004h3.982c.741 5.926 5.802 10.53 11.927 10.53s11.185-4.604 11.927-10.53h1.814c.742 5.926 5.802 10.53 11.927 10.53s11.186-4.604 11.927-10.53H59c.012 0 .023-.004.036-.004.895 0 1.692-.717 1.426-1.826zm-34.147 1.828c-.715 4.272-4.421 7.531-8.896 7.531-4.475 0-8.18-3.259-8.896-7.531-.082-.488-.135-.988-.135-1.5s.053-1.011.135-1.5c.715-4.271 4.421-7.531 8.896-7.531 4.475 0 8.18 3.26 8.896 7.531.082.489.135.988.135 1.5s-.053 1.011-.135 1.5zm25.675 0c-.716 4.272-4.421 7.531-8.896 7.531-4.475 0-8.181-3.259-8.896-7.531-.082-.488-.135-.988-.135-1.5s.053-1.011.135-1.5c.716-4.271 4.421-7.531 8.896-7.531 4.475 0 8.181 3.26 8.896 7.531.082.489.135.988.135 1.5s-.053 1.011-.135 1.5z"/>
+                  </svg>
+                  <svg class="site-list__logo site-list__logo--desktop" xmlns="http://www.w3.org/2000/svg" width="146.3" height="40.375">
+                    <path d="M71.874 18.661c0-.708.58-1.288 1.256-1.288h7.18c5.087 0 8.436 2.704 8.436 7.146v.064c0 4.861-4.057 7.373-8.854 7.373h-5.475v6.825c0 .708-.58 1.288-1.288 1.288-.676 0-1.256-.58-1.256-1.288v-20.12zm8.114 10.98c3.734 0 6.182-1.996 6.182-4.959v-.063c0-3.22-2.414-4.894-6.053-4.894h-5.699v9.917h5.57v-.001zM93.603 18.5c0-.708.579-1.288 1.255-1.288.709 0 1.288.58 1.288 1.288v20.283a1.29 1.29 0 01-1.288 1.287c-.676 0-1.255-.579-1.255-1.287V18.5zm9.141.032c0-.676.58-1.256 1.256-1.256h.354c.58 0 .935.29 1.288.74l13.684 17.45V18.468c0-.676.547-1.256 1.256-1.256.676 0 1.224.58 1.224 1.256v20.349c0 .676-.481 1.19-1.158 1.19h-.129c-.548 0-.935-.321-1.319-.772l-13.975-17.868v17.45c0 .676-.547 1.256-1.256 1.256-.676 0-1.223-.58-1.223-1.256V18.532h-.002zm25.429-.032c0-.708.58-1.288 1.257-1.288.708 0 1.286.58 1.286 1.288v12.331l12.848-13.168c.29-.257.579-.451.998-.451.676 0 1.225.612 1.225 1.256 0 .354-.162.644-.42.901l-7.984 7.92 8.564 10.561c.225.291.354.547.354.935 0 .676-.578 1.288-1.286 1.288-.483 0-.806-.258-1.03-.58l-8.402-10.463-4.863 4.861v4.894a1.29 1.29 0 01-1.286 1.288c-.677 0-1.257-.58-1.257-1.288V18.5h-.004z"/>
+                    <path fill="#D22856" d="M98.498 9.875a3.623 3.623 0 01-3.623-3.624 3.625 3.625 0 01-3.625 3.624 3.625 3.625 0 013.625 3.624 3.623 3.623 0 013.623-3.624z"/>
+                    <g>
+                      <path d="M43.094 19.313c.246 0 .489.014.73.033a2.491 2.491 0 00-2.136-1.221 1.994 1.994 0 01-1.884-1.354c-.727.208-1.425.482-2.089.816.062.017.122.038.188.038a2 2 0 012 2c0 .096-.015.188-.028.281 1-.382 2.084-.593 3.219-.593z"/>
+                      <path d="M60.462 28.016L55.287 6.651C54.926 4.303 52.694 0 46.688 0a1.5 1.5 0 100 3c4.856 0 5.575 3.729 5.639 4.143l4.767 19.701h-2.073c-.445-3.557-2.453-6.628-5.305-8.522a2.503 2.503 0 00-1.529 2.303c0 .088-.015.171-.026.256a9.034 9.034 0 013.829 5.964c.082.489.135.988.135 1.5s-.053 1.012-.135 1.5c-.716 4.272-4.421 7.531-8.896 7.531-4.475 0-8.181-3.259-8.896-7.531-.082-.488-.135-.988-.135-1.5s.053-1.011.135-1.5a8.949 8.949 0 01.808-2.483 1.995 1.995 0 01-1.852-1.985.743.743 0 00-.192-.489 11.954 11.954 0 00-1.795 4.958h-1.82c-.741-5.927-5.802-10.531-11.927-10.531S6.235 20.917 5.493 26.844H3.42L8.187 7.143C8.25 6.729 8.97 3 13.826 3a1.5 1.5 0 100-3C7.82 0 5.588 4.303 5.227 6.651L.052 28.016c-.266 1.109.531 1.826 1.426 1.826.012 0 .023.004.036.004h3.982c.079.628.215 1.237.387 1.831a.726.726 0 00.102-.354 2 2 0 012-2c.166 0 .324.025.478.063a8.337 8.337 0 01-.074-1.042c0-.512.053-1.011.135-1.5.715-4.271 4.421-7.531 8.896-7.531s8.18 3.26 8.896 7.531c.082.489.135.988.135 1.5s-.053 1.012-.135 1.5c-.715 4.272-4.421 7.531-8.896 7.531a8.959 8.959 0 01-5.386-1.794c-.35.302-.8.491-1.299.491a.75.75 0 00-.749.748c0 .29-.065.564-.176.812a11.94 11.94 0 007.614 2.743c6.125 0 11.185-4.604 11.927-10.53h1.814c.742 5.926 5.802 10.53 11.927 10.53s11.186-4.604 11.927-10.53H59c.012 0 .023-.004.036-.004.895.001 1.692-.716 1.426-1.825z"/>
+                    </g>
+                    <path fill="#D22856" d="M50.686 16.125a4.499 4.499 0 01-4.499-4.499 4.499 4.499 0 01-4.499 4.499 4.499 4.499 0 014.499 4.499 4.498 4.498 0 014.499-4.499zm-12.782 3.501a2.748 2.748 0 01-2.749-2.749 2.748 2.748 0 01-2.749 2.749 2.747 2.747 0 012.749 2.749 2.748 2.748 0 012.749-2.749zm-27.17 14.446a2.748 2.748 0 01-2.749-2.75c0 1.52-1.23 2.75-2.749 2.75a2.747 2.747 0 012.749 2.748 2.748 2.748 0 012.749-2.748z"/>
+                  </svg>
+                </div>
+            </a>
+            <button class="site-list__burger-btn burger-btn--closed" aria-label="показать / скрыть меню навигации" type="button">
+              <svg class="site-list__burger-btn-svg">
+                <use class="site-list__burger-btn-pic site-list__burger-btn-pic--active site-list__menu-burger-pic" href="#icon-menu-burger">
+                </use>
+                <use class="site-list__burger-btn-pic site-list__menu-cross-pic" href="#icon-menu-cross">
+                </use>
+              </svg>
+            </button>
+          </div>
+        </li>
+        <li class="site-list__item site-list__item--active">
+          <a class="site-list__item-link site-list__item-link--active">
+            Главная
+          </a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__item-link" href="javascript:void(0);">
+            Фотографии
+          </a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__item-link" href="javascript:void(0);">
+            Конкурс
+          </a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__item-link" href="mailto:mail@htmlacademy.ru">
+            HTML Academy
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="page-main">
+    <h1 class="visually-hidden">приложение PINK</h1>
+    <section class="install-app">
+      <h2 class="visually-hidden">установка приложения</h2>
+        <div class="install-app__flex-wrapper">
+          <div class="install-app__hand-pic-wrapper-desktop">
+            <img class="install-app__hand-pic-desktop"
+                 srcset="img/dest/iphone-hand-desktop@1x.webp 1x,
+                         img/dest/iphone-hand-desktop@2x.webp 2x,
+                         img/dest/iphone-hand-desktop@2x.png 2x"
+                 src="img/dest/iphone-hand-desktop@1x.png">
+           </div>
+          <div class="install-app__promo">
+            <p class="install-app__tagline">Взгляните на жизнь<br>иначе!</p>
+          <div class="install-app__hand-pic-wrapper">
+            <img class="install-app__hand-pic"
+                 srcset="img/dest/iphone-hand-mobile@1x.webp 1x,
+                         img/dest/iphone-hand-mobile@2x.webp 2x,
+                         img/dest/iphone-hand-mobile@2x.png 2x"
+                 src="img/dest/iphone-hand-mobile@1x.png">
+          </div>
+          </div>
+          <a class="install-app__btn" href="https://www.apple.com/app-store/" aria-label="скачать приложение на iOS">Скачать приложение</a>
+          <ul class="app-stores-list">
+            <li class="app-stores-list__item">
+              <a href="https://www.apple.com/app-store/">
+                <img src="img/dest/logo-apple.svg" width="47" height="56" alt="Apple store" title="скачать приложение в Apple store">
+              </a>
+            </li>
+            <li class="app-stores-list__item">
+              <a href="https://playmarket.store/">
+                <img src="img/dest/logo-android.svg" width="47" height="47" alt="Play market" title="скачать приложение в Play market">
+              </a>
+            </li>
+            <li class="app-stores-list__item">
+              <a href="https://www.microsoft.com/ru-ru/store/apps/windows">
+                <img src="img/dest/logo-microsoft.svg"  width="44" height="41" alt="Microsoft store" title="скачать приложение в Microsoft store">
+              </a>
+            </li>
+          </ul>
+          <p class="app-stores-list__caption">Доступно для iPhone, iPad, Android,<br>Windows Phone, OS X, Windows 8</p>
+        </div>
+    </section>
+    <section class="features">
+      <h2 class="visually-hidden">преимущества</h2>
+      <p class="features__tagline tagline__part-1">Устали от серости мегаполиса?</p>
+      <p class="features__tagline tagline__part-2">Нам есть, что вам предложить!</p>
+      <div class="features__wrapper">
+        <ul class="features__list">
+          <li class="features__item">
+            <h3 class="features__heading">Поднимает настроение</h3>
+            <p class="features__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+          </li>
+          <li class="features__item">
+            <h3 class="features__heading">Меняет мир вокруг</h3>
+            <p class="features__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы<span class="features__text-br"></span> усилить эффект</p>
+          </li>
+          <li class="features__item">
+            <h3 class="features__heading">Заводит новых друзей</h3>
+            <p class="features__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+          </li>
+        </ul>
+        <div class="features__teaser-pics">
+          <img class="features__phone-pic-1 features__phone-pic"
+               srcset="img/dest/iphone-screen-1-desktop@2x.webp 2x,
+                       img/dest/iphone-screen-1-desktop@2x.png 2x,
+                       img/dest/iphone-screen-1-desktop@1x.webp 1x"
+               src="img/dest/iphone-screen-1-desktop@1x.png"
+               alt="приложение в действии">
+          <img class="features__phone-pic-2 features__phone-pic"
+               srcset="img/dest/iphone-screen-2-desktop@2x.webp 2x,
+                       img/dest/iphone-screen-2-desktop@2x.png 2x,
+                       img/dest/iphone-screen-2-desktop@1x.webp 1x"
+               src="img/dest/iphone-screen-2-desktop@1x.png"
+               alt="приложение в действии">
+          <picture>
+            <source media="(min-width: 960px)"
+                    srcset="img/dest/iphone-screen-3-desktop@2x.webp 2x,
+                            img/dest/iphone-screen-3-desktop@2x.png 2x,
+                            img/dest/iphone-screen-3-desktop@1x.webp 1x,
+                            img/dest/iphone-screen-3-desktop@1x.png 1x">
+            <source media="(min-width: 660px)"
+                    srcset="img/dest/iphone-screen-3-tablet@2x.webp 2x,
+                            img/dest/iphone-screen-3-tablet@2x.png 2x,
+                            img/dest/iphone-screen-3-tablet@1x.webp 1x,
+                            img/dest/iphone-screen-3-tablet@1x.png 1x">
+            <img class="features__phone-pic-3 features__phone-pic"
+                 srcset="img/dest/iphone-screen-mobile@2x.webp 2x,
+                         img/dest/iphone-screen-mobile@2x.png 2x,
+                         img/dest/iphone-screen-mobile@1x.webp 1x"
+                 src="img/dest/iphone-screen-mobile@1x.png"
+                 alt="приложение в действии">
+          </picture>
+        </div>
+      </div>
+    </section>
+    <article class="research">
+      <div class="research__whole-article-wrapper">
+        <svg class="research__clock">
+          <use href="#icon-timer-full"></use>
+        </svg>
+        <div class="research__article-wrapper">
+          <h2 class="research__heading">Эффект<span class="research__text-br"></span> на 24 часа!</h2>
+          <p class="research__description">Британские ученые провели исследования и доказали, <span class="research__text-br--desktop"></span>что положительный эффект <span class="research__text-br"></span>от использования приложения длится <span class="research__text-br"></span>целые сутки!</p>
+          <a class="research__link" href="javascript:void(0);">Узнать больше об исследовании</a>
+        </div>
+      </div>
+    </article>
+    <section class="reviews">
+      <h2 class="visually-hidden">отзывы о приложении PINK</h2>
+      <svg class="reviews__quotes-icon">
+        <use href="#icon-quotes"></use>
+      </svg>
+      <ul class="reviews__list">
+        <li class="reviews__item reviews__item--active">
+          <p class="reviews__author-info">25 лет, водитель трамвая</p>
+          <p class="reviews__author-name">Николай Петров</p>
+          <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+        </li>
+        <li class="reviews__item">
+          <p class="reviews__author"></p>
+          <p class="reviews__text"></p>
+        </li>
+        <li class="reviews__item">
+          <p class="reviews__author"></p>
+          <p class="reviews__text"></p>
+        </li>
+      </ul>
+      <ul class="reviews__mobile-slider">
+        <li><button class="mobile-slider__btn mobile-slider__btn--active" aria-label="первый слайд" type="button"></button></li>
+        <li><button class="mobile-slider__btn" aria-label="второй слайд" type="button"></button></li>
+        <li><button class="mobile-slider__btn" aria-label="третий слайд" type="button"></button></li>
+      </ul>
+      <ul class="reviews__desktop-slider">
+        <li><button class="desktop-slider__btn" aria-label="предыдущий слайд" type="button">
+          <svg class="desktop-slider__arrow-pic desktop-slider__arrow-left"><use href="#icon-review-arrow-left"></use></svg>
+        </button></li>
+        <li><button class="desktop-slider__btn" aria-label="следующий слайд" type="button">
+          <svg class="desktop-slider__arrow-pic desktop-slider__arrow-right"><use href="#icon-review-arrow-right"></use></svg>
+        </button></li>
+      </ul>
+    </section>
+    <section class="pricing">
+      <h2 class="visually-hidden">цены</h2>
+      <div class="pricing__table-wrapper">
+        <table class="pricing__table pricing__table--02-tariff-focus">
+            <thead class="pricing__table-head">
+              <tr>
+                <th class="pricing__starting-empty-cell"></th>
+                <th class="pricing__heading-cell">
+                  <ul class="pricing__tariff-info">
+                    <li class="pricing__tariff-name">база</li>
+                    <li class="pricing__tariff-price">1,99 USD</li>
+                  </ul>
+                </th>
+                <th class="pricing__heading-cell">
+                  <ul class="pricing__tariff-info">
+                    <li class="pricing__tariff-name pricing__hit-tariff">стандарт</li>
+                    <li class="pricing__tariff-price">3,99 USD</li>
+                  </ul>
+                </th>
+                <th class="pricing__heading-cell">
+                  <ul class="pricing__tariff-info">
+                    <li class="pricing__tariff-name">анлим</li>
+                    <li class="pricing__tariff-price">9,99 USD</li>
+                  </ul>
+                </th>
+              </tr>
+            </thead>
+          <tbody class="pricing__table-body">
+            <tr>
+              <td class="pricing__cell pricing__option-naming-cell">Розовый фильтр</td>
+              <td class="pricing__cell pricing__option-decision pricing__cell--included">
+                <div class="pricing__option-decision-inner-wrapper">
+                  <p class="pricing__option-naming">Розовый фильтр</p>
+                  <svg class="pricing__option-included-symbol">
+                    <use href="#icon-yes"></use>
+                  </svg>
+                </div>
+              </td>
+              <td class="pricing__cell pricing__option-decision pricing__cell--included">
+                <div class="pricing__option-decision-inner-wrapper">
+                  <p class="pricing__option-naming">Розовый фильтр</p>
+                  <svg class="pricing__option-included-symbol">
+                    <use href="#icon-yes"></use>
+                  </svg>
+                </div>
+              </td>
+              <td class="pricing__cell pricing__option-decision pricing__cell--included">
+                <div class="pricing__option-decision-inner-wrapper">
+                  <p class="pricing__option-naming">Розовый фильтр</p>
+                  <svg class="pricing__option-included-symbol">
+                    <use href="#icon-yes"></use>
+                  </svg>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="pricing__cell pricing__option-naming-cell">Смайлики</td>
+              <td class="pricing__cell pricing__option-decision pricing__cell--excluded">
+                <div class="pricing__option-decision-inner-wrapper">
+                  <p class="pricing__option-naming">Смайлики</p>
+                  <svg class="pricing__option-excluded-symbol">
+                    <use href="#icon-no"></use>
+                  </svg>
+                </div>
+              </td>
+              <td class="pricing__cell pricing__option-decision pricing__cell--included">
+                <div class="pricing__option-decision-inner-wrapper">
+                  <p class="pricing__option-naming">Смайлики</p>
+                  <svg class="pricing__option-included-symbol">
+                    <use href="#icon-yes"></use>
+                  </svg>
+                </div>
+              </td>
+              <td class="pricing__cell pricing__option-decision pricing__cell--included">
+                <div class="pricing__option-decision-inner-wrapper">
+                  <p class="pricing__option-naming">Смайлики</p>
+                  <svg class="pricing__option-included-symbol">
+                    <use href="#icon-yes"></use>
+                  </svg>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="pricing__cell pricing__option-naming-cell">Комментарии</td>
+              <td class="pricing__cell pricing__option-decision pricing__cell--excluded">
+                <div class="pricing__option-decision-inner-wrapper">
+                  <p class="pricing__option-naming">Комментарии</p>
+                  <svg class="pricing__option-excluded-symbol" aria-label="">
+                    <use href="#icon-no"></use>
+                  </svg>
+                </div>
+              </td>
+              <td class="pricing__cell pricing__option-decision pricing__cell--excluded">
+                <div class="pricing__option-decision-inner-wrapper">
+                  <p class="pricing__option-naming">Комментарии</p>
+                  <svg class="pricing__option-excluded-symbol">
+                    <use href="#icon-no"></use>
+                  </svg>
+                </div>
+              </td>
+              <td class="pricing__cell pricing__option-decision pricing__cell--included">
+                <div class="pricing__option-decision-inner-wrapper">
+                  <p class="pricing__option-naming">Комментарии</p>
+                  <svg class="pricing__option-included-symbol">
+                    <use href="#icon-yes"></use>
+                  </svg>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <ul class="pricing-slider">
+        <li><button class="pricing-slider__btn" aria-label="первый слайд" type="button"></button></li>
+        <li><button class="pricing-slider__btn pricing-slider__btn--active" aria-label="второй слайд" type="button"></button></li>
+        <li><button class="pricing-slider__btn" aria-label="третий слайд" type="button"></button></li>
+      </ul>
+    </section>
+    <section class="contacts">
+      <h2 class="visually-hidden">контакты</h2>
+      <p class="contacts__tagline">Остались вопросы? <span class="contacts-list__br"></span>Свяжитесь с нами!</p>
+      <ul class="contacts-list">
+        <div class="contacts-list__phone-item-wrapper">
+          <li class="contacts-list__item contacts-list__phone-item">
+            <h3 class="contacts-list__contact-heading">Звоните:</h3>
+            <a href="tel:+78125556666" class="contacts-list__the-contact">+7 (812) 555-66-66</a>
+          </li>
+        </div>
+        <div class="contacts-list__mail-item-wrapper">
+          <li class="contacts-list__item contacts-list__mail-item">
+            <h3 class="contacts-list__contact-heading">Пишите:</h3>
+            <a href="mailto:mail@htmlacademy.ru" class="contacts-list__the-contact">mail@htmlacademy.ru</a>
+          </li>
+        </div>
+        <li class="contacts-list__item contacts-list__address-item">
+          <h3 class="contacts-list__contact-heading">Приезжайте в гости:</h3>
+          <address class="contacts-list__the-contact">ул. Большая <span class="contacts-list__br"></span>Конюшенная, 19/8</address>
+        </li>
+      </ul>
+      <div class="contacts__map-wrapper">
+        <iframe class="contacts__the-map"
+                src="https://yandex.com/map-widget/v1/?um=constructor%3A1105cee7fd23defbad0f95d11f5f88809f3162567c1e000e32cb7e387d69dd78&amp;source=constructor"
+                width="100%"
+                height="720"
+                frameborder="0">
+        </iframe>
+      </div>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <div class="socials">
+      <!-- <a class="socials__pink-logo-link">
+        <picture>
+          <source media="(min-width: 960px)"
+                  srcset="img/dest/logo-pink-blue-desktop.svg">
+          <img class="socials__pink-logo" src="img/dest/logo-pink-blue-mobile.svg"
+               alt="приложение 'PINK'">
+        </picture>
+      </a> -->
+      <a class="socials__pink-logo-link" aria-label="На главную">
+        <div class="socials__pink-logo-wrapper">
+          <svg class="socials__pink-logo socials__pink-logo--mobile"
+               xmlns="http://www.w3.org/2000/svg"
+               width="146.3"
+               height="40.375">
+            <path class="socials__pink-logo-name-part" d="M71.874 18.661c0-.708.58-1.288 1.256-1.288h7.18c5.087 0 8.436 2.704 8.436 7.146v.063c0 4.86-4.057 7.373-8.854 7.373h-5.475v6.825c0 .708-.58 1.287-1.289 1.287-.676 0-1.256-.58-1.256-1.287l.002-20.119zm8.114 10.98c3.734 0 6.182-1.996 6.182-4.959v-.062c0-3.221-2.414-4.894-6.053-4.894h-5.699v9.917h5.57v-.002zM93.603 18.5c0-.708.579-1.288 1.255-1.288.709 0 1.288.58 1.288 1.288v20.283a1.29 1.29 0 01-1.288 1.287c-.676 0-1.255-.579-1.255-1.287V18.5zm9.141.032c0-.676.58-1.256 1.256-1.256h.354c.58 0 .935.29 1.288.74l13.684 17.45V18.468c0-.676.547-1.256 1.256-1.256.676 0 1.225.58 1.225 1.256v20.349c0 .677-.48 1.19-1.158 1.19h-.129c-.548 0-.936-.321-1.318-.772l-13.976-17.867v17.449c0 .677-.547 1.257-1.257 1.257-.676 0-1.223-.58-1.223-1.257V18.532h-.002zm25.429-.032c0-.708.58-1.288 1.257-1.288.708 0 1.286.58 1.286 1.288v12.331l12.848-13.16c.29-.257.579-.451.998-.451.676 0 1.225.612 1.225 1.256 0 .354-.162.644-.42.901l-7.984 7.92 8.564 10.561c.225.291.354.547.354.936 0 .676-.577 1.288-1.285 1.288-.482 0-.807-.259-1.03-.58l-8.401-10.464-4.863 4.861v4.895a1.29 1.29 0 01-1.286 1.288c-.677 0-1.257-.58-1.257-1.288V18.5h-.006z"/>
+            <path fill="#D22856" d="M60.462 28.016L55.287 6.651C54.926 4.303 52.694 0 46.688 0a1.5 1.5 0 100 3c4.856 0 5.575 3.729 5.639 4.143l4.767 19.701h-2.073c-.742-5.927-5.802-10.531-11.927-10.531s-11.186 4.604-11.927 10.531h-1.82c-.741-5.927-5.802-10.531-11.927-10.531S6.235 20.917 5.493 26.844H3.42L8.187 7.143C8.25 6.729 8.97 3 13.826 3a1.5 1.5 0 100-3C7.82 0 5.588 4.303 5.227 6.651L.052 28.016c-.266 1.109.531 1.826 1.426 1.826.012 0 .023.004.036.004h3.982c.741 5.926 5.802 10.53 11.927 10.53s11.185-4.604 11.927-10.53h1.814c.742 5.926 5.802 10.53 11.927 10.53s11.186-4.604 11.927-10.53H59c.012 0 .023-.004.036-.004.895 0 1.692-.717 1.426-1.826zm-34.147 1.828c-.715 4.272-4.421 7.531-8.896 7.531s-8.18-3.259-8.896-7.531c-.082-.488-.135-.988-.135-1.5s.053-1.011.135-1.5c.715-4.271 4.421-7.531 8.896-7.531s8.18 3.26 8.896 7.531c.082.489.135.988.135 1.5s-.053 1.011-.135 1.5zm25.675 0c-.716 4.272-4.421 7.531-8.896 7.531-4.475 0-8.181-3.259-8.896-7.531-.082-.488-.135-.988-.135-1.5s.053-1.011.135-1.5c.716-4.271 4.421-7.531 8.896-7.531 4.475 0 8.181 3.26 8.896 7.531.082.489.135.988.135 1.5s-.053 1.011-.135 1.5z"/>
+          </svg>
+          <svg class="socials__pink-logo socials__pink-logo--desktop"
+               xmlns="http://www.w3.org/2000/svg"
+               width="146.3"
+               height="40.375">
+            <path class="socials__pink-logo-name-part" d="M71.874 18.661c0-.708.58-1.288 1.256-1.288h7.18c5.087 0 8.436 2.704 8.436 7.146v.063c0 4.86-4.057 7.373-8.854 7.373h-5.475v6.825c0 .708-.58 1.287-1.289 1.287-.676 0-1.256-.58-1.256-1.287l.002-20.119zm8.114 10.98c3.734 0 6.182-1.996 6.182-4.959v-.062c0-3.221-2.414-4.894-6.053-4.894h-5.699v9.917h5.57v-.002zM93.603 18.5c0-.708.579-1.288 1.255-1.288.709 0 1.288.58 1.288 1.288v20.283a1.29 1.29 0 01-1.288 1.287c-.676 0-1.255-.579-1.255-1.287V18.5zm9.141.032c0-.676.58-1.256 1.256-1.256h.354c.58 0 .935.29 1.288.74l13.684 17.45V18.468c0-.676.547-1.256 1.256-1.256.676 0 1.225.58 1.225 1.256v20.349c0 .677-.48 1.19-1.158 1.19h-.129c-.548 0-.936-.321-1.318-.772l-13.976-17.867v17.449c0 .677-.547 1.257-1.257 1.257-.676 0-1.223-.58-1.223-1.257V18.532h-.002zm25.429-.032c0-.708.58-1.288 1.257-1.288.708 0 1.286.58 1.286 1.288v12.331l12.848-13.168c.29-.257.579-.451.998-.451.676 0 1.225.612 1.225 1.256 0 .354-.162.644-.42.901l-7.984 7.92 8.564 10.561c.225.291.354.547.354.936 0 .676-.577 1.288-1.285 1.288-.482 0-.807-.259-1.03-.58l-8.401-10.464-4.863 4.861v4.895a1.29 1.29 0 01-1.286 1.288c-.677 0-1.257-.58-1.257-1.288V18.5h-.006z"/>
+            <path fill="#D22856" d="M98.498 9.875a3.623 3.623 0 01-3.623-3.624 3.625 3.625 0 01-3.625 3.624 3.625 3.625 0 013.625 3.624 3.623 3.623 0 013.623-3.624z"/>
+            <g fill="#D22856">
+              <path d="M43.094 19.313c.246 0 .489.014.73.033a2.491 2.491 0 00-2.136-1.221 1.994 1.994 0 01-1.884-1.354c-.727.208-1.425.482-2.089.816.062.017.122.038.188.038a2 2 0 012 2c0 .096-.015.188-.028.281 1-.382 2.084-.593 3.219-.593z"/>
+              <path d="M60.462 28.016L55.287 6.651C54.926 4.303 52.694 0 46.688 0a1.5 1.5 0 100 3c4.856 0 5.575 3.729 5.639 4.143l4.767 19.701h-2.073c-.445-3.557-2.453-6.628-5.305-8.522a2.503 2.503 0 00-1.529 2.303c0 .088-.015.171-.026.256a9.034 9.034 0 013.829 5.965c.082.488.135.987.135 1.5 0 .512-.053 1.012-.135 1.5-.716 4.271-4.421 7.53-8.896 7.53-4.475 0-8.181-3.259-8.896-7.53a9.035 9.035 0 01-.135-1.5c0-.513.053-1.012.135-1.5a8.945 8.945 0 01.808-2.484 1.994 1.994 0 01-1.852-1.984.739.739 0 00-.192-.488 11.95 11.95 0 00-1.795 4.957h-1.82c-.741-5.927-5.802-10.531-11.927-10.531S6.235 20.917 5.493 26.844H3.42L8.187 7.143C8.25 6.729 8.97 3 13.826 3a1.5 1.5 0 100-3C7.82 0 5.588 4.303 5.227 6.651L.052 28.016c-.266 1.109.531 1.826 1.426 1.826.012 0 .023.004.036.004h3.982c.079.629.215 1.237.387 1.831a.726.726 0 00.102-.354 2 2 0 012-2c.166 0 .324.024.478.062a8.337 8.337 0 01-.074-1.042c0-.512.053-1.011.135-1.5.715-4.271 4.421-7.531 8.896-7.531s8.18 3.26 8.896 7.531c.082.489.135.988.135 1.5s-.053 1.012-.135 1.5c-.715 4.272-4.421 7.531-8.896 7.531a8.959 8.959 0 01-5.386-1.794c-.35.302-.8.491-1.299.491a.75.75 0 00-.749.748c0 .289-.065.563-.176.812a11.94 11.94 0 007.614 2.743c6.125 0 11.185-4.604 11.927-10.529h1.814c.742 5.926 5.802 10.529 11.927 10.529s11.186-4.604 11.927-10.529H59c.012 0 .023-.005.036-.005.895.002 1.692-.715 1.426-1.824z"/>
+            </g>
+            <path class="socials__pink-logo-sparks-part" d="M50.686 16.125a4.499 4.499 0 01-4.499-4.499 4.499 4.499 0 01-4.499 4.499 4.499 4.499 0 014.499 4.499 4.498 4.498 0 014.499-4.499zm-12.782 3.501a2.748 2.748 0 01-2.749-2.749 2.748 2.748 0 01-2.749 2.749 2.747 2.747 0 012.749 2.749 2.748 2.748 0 012.749-2.749zm-27.17 14.446a2.748 2.748 0 01-2.749-2.75c0 1.52-1.23 2.75-2.749 2.75a2.747 2.747 0 012.749 2.748 2.748 2.748 0 012.749-2.748z"/>
+          </svg>
+        </div>
+      </a>
+      <ul class="socials__the-socials">
+        <li class="socials__the-socials-item">
+          <a class="socials__link socials__link--twitter" href="javascript:void(0);" title="Мы в Twitter">
+            <svg class="socials__the-socials-icon socials__twitter-icon" aria-label="Twitter">
+              <use href="#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials__the-socials-item">
+          <a class="socials__link socials__link--fb" href="javascript:void(0);" title="Мы на Facebook ">
+            <svg class="socials__the-socials-icon socials__facebook-icon" aria-label="Facebook">
+              <use href="#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials__the-socials-item">
+          <a class="socials__link socials__link--yt" href="javascript:void(0);" title="Мы на YouTube">
+            <svg class="socials__the-socials-icon socials__youtube-icon" aria-label="Youtube">
+              <use href="#icon-youtube"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <div class="socials__dev-credits">
+        <a class="socials__html-academy-link" href="https://up.htmlacademy.ru/adaptive/20" aria-label="логотип HTML academy" title="HTML Academy">
+          <p class="socials__caption">Разработано</p>
+          <svg class="socials__html-academy-icon"
+               version="1.0"
+               xmlns="http://www.w3.org/2000/svg"
+               width="26.943"
+               height="34.09">
+            <path d="M13.62.017L13.472 0 0 1.412v24.661l13.472 8.017 13.43-7.99.042-.026V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.547-1.212 11.547 1.212v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.013 1.415 5.904 3.513-.86.507-5.031-2.992-.013 1.415 3.827 2.275-.782.523-3.032-1.787-.013 1.413 1.852 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.015 1.044-7.941-4.728-.015 1.416 7.979 4.796.017 1.076-7.972-4.741-.013 1.415 8.021 4.821.045.026 8.143-4.872v-1.268l-.011-.148v-3.761l3.415-2.036v10.02L13.472 31.85 1.925 24.979v-9.852z"/>
+          </svg>
+        </a>
+      </div>
+  </footer>
+  <script src='js/app.min.js'></script>
+</body>
+</html>
